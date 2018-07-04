@@ -38,7 +38,7 @@ An Eclipse launcher widow will appear asking to select a directory as workspace
 
 **1.2.2.** Click on the **Browse…** button, browse to **/home/centos/aws-fpga/GUI\_flow**, click **OK** twice
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-1.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-1.png)
 #### Figure 1. Selecting a workspace
 
 The Xilinx SDx IDE window will be displayed
@@ -67,12 +67,12 @@ Note the AWS-VU9P-F1 board is displayed as the hardware platform
 
 **1.2.10.** Select **Vector Addition** from the _Available Templates_ pane and click **Finish**
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-4.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-4.png)
 #### Figure 4. Selecting an application template
 
 The project IDE will be displayed with six main windows: Project Explorer, Project Settings, Reports, Outline, multi-tab console, and Emulation Console.
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-5.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-5.png)
 #### Figure 5. Project IDE
 
 ## Step 2: Perform CPU Emulation
@@ -86,7 +86,7 @@ The project IDE will be displayed with six main windows: Project Explorer, Proje
 
 **2.1.4.** Either select **Project &gt; Build Configurations &gt; Set Active &gt; Emulation-CPU** or click on the drop-down button of _Active build configuration_ and select **Emulation-CPU**
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-6.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-6.png)
 #### Figure 6. Selecting CPU emulation build configuration
 
 
@@ -98,7 +98,7 @@ This will build the project including gui\_flow\_example.exe file under the Emul
 
 The application will be run and the output will be displayed in the Console tab
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-7.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-7.png)
 #### Figure 7. CPU Emulation run output
 
 ## Step 3: Perform HW Emulation
@@ -110,7 +110,7 @@ The application will be run and the output will be displayed in the Console tab
 ### 3.1. Select the Emulation-HW build configuration and build the project.
 **3.1.1.** Either select **Project &gt; Build Configurations &gt; Set Active &gt; Emulation-HW** or click on the drop-down button of _Active build configuration_ and select **Emulation-HW**
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-8.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-8.png)
 #### Figure 8. Selecting HW emulation build configuration
 
 **3.1.2.** Either select **Project &gt; Build Project** or click on the (![alt tag](./images/Fig-build.png)) button
@@ -123,44 +123,44 @@ This will build the project including gui\_flow\_example.exe file under the Emul
 
 If no argument was assigned then you would have to explicitly assign the **xclbin** by clicking on the _Automatically add binary container(s) to arguments_, and click **Apply**
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-9.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-9.png)
 #### Figure 9. Populated Arguments tab
 
 **3.1.5.** Click **Run** to run the application
 
 **3.1.6.** The Console tab shows that the test was completed successfully along with the data transfer rate
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-10.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-10.png)
 #### Figure 10. Hardware emulation run output
 
 ### 3.2. Understand the HLS Report, profile summary, and Application Timeline.
 **3.2.1.** Double-click on the **HLS Report** entry under _Emulation-HW &gt; binary\_container\_1 &gt; krnl\_vadd_ in the _Reports_ view to open the report
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-11.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-11.png)
 #### Figure 11. The Report view
 
 The multi-tab window will open showing the Synthesis report for krnl\_vadd accelerator.  It includes the target device information
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-12.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-12.png)
 #### Figure 12. Multi-tab HLS synthesis report for krnl\_vadd accelerator
 
 **3.2.2.** Scroll down the window and observe the timing, latency, and loop performance results. Observe that the target frequency is 250 MHz (4 ns period) and achieved period is 2.92 ns indicating that the timing has been met. 
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-13.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-13.png)
 #### Figure 13. Performance estimate results
 
 **3.2.3.** Scroll further down and observe the resource utilization by the accelerator
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-14.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-14.png)
 #### Figure 14. Resource utilization
 
 **3.2.4.** Scrolling down further shows the Interface summary indicating various ports, width, protocol that they are part of, type of object, and parameter type they belong to.
 
 As can be seen, there are three interfaces being used: control, s\_axi, and m\_axi. The s\_axi is 32-bit wide data, control provides necessary handshaking signals, and m\_axi has 32-bit data. The m\_axi is connected to gmem, the global memory which is DDR. The DDR memory uses 64-bit address.
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-15-1.png)
-![alt tag](./images/guiflow_lab/FigGuiflowLab-15-2.png)
-![alt tag](./images/guiflow_lab/FigGuiflowLab3-15-3.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-15-1.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-15-2.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-15-3.png)
 #### Figure 15. Interface details showing ports, direction, size, protocol, object and data types
 
 ### 3.3. Review the profile summary report
@@ -168,23 +168,23 @@ As can be seen, there are three interfaces being used: control, s\_axi, and m\_a
 
 Notice a multi-tab report window is opened. It has four tabs: the Top Operations, Kernels and Compute Units, the Data Transfers, and the OpenCL APIs. The Top Operations tab shows the device being used, the number of transfers (2112), average bytes per transfer (5.818), and the transfer efficiency. It also shows the kernel (krnl\_vadd) being used, the location of the kernel, beside the context ID.
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-16.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-16.png)
 #### Figure 16. Top operation information in the profile summary
 
 **3.3.2.** Click on the **Kernels &amp; Compute Units** tab and observe the number of Enqueues (1), the Global work size (1:1:1), the Local work size (1:1:1) and the number of calls to the kernel (1)
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-17.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-17.png)
 #### Figure 17. Kernel and computer unit information in the profile summary
 
 **3.3.3.** Click on the **Data Transfers** tab and observe the number of read (1, result read), the number of write (2, two source operands being written), and the average size (4096 KB) between the host and memory. It also shows the number of read (2048, read data), the number write (64, write data), the transfer rates, and the average time.
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-18.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-18.png)
 #### Figure 18. Data transfer information in the profile summary
 
 ### 3.4. Review the Application Timeline report
 **3.4.1.** Double-click on the **Application Timeline** entry in the _Reports_ tab, expand all entries in the timeline graph, zoom appropriately and observe the transactions. You will see when the kernel is running, when the write transaction takes place between host and global memory, when the read transactions are taking place between global memory and kernel memory, when the write transactions are taking place between the kernel and global memory, and when the read transaction is taking place between the global memory and host.
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-19.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-19.png)
 #### Figure 19. Timeline graph showing various activities in various region of the system
 
 ### 3.5. Review the System Estimate report.
@@ -192,7 +192,7 @@ Notice a multi-tab report window is opened. It has four tabs: the Top Operations
 
 **3.5.2.** The report shows the estimated frequency and the resource utilization for the given kernel (krnl\_vadd)
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-20.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-20.png)
 #### Figure 20. The system estimate report
 
 ## Step 4: Run the Application on F1
@@ -212,7 +212,7 @@ Notice a multi-tab report window is opened. It has four tabs: the Top Operations
    ```
 **4.1.3.** The FPGA bitstream will be downloaded and the host application will be executed showing output something like:
 
-![alt tag](./images/guiflow_lab/FigGuiflowLab-1.png)
+![alt tag](./images/guiflow_lab/FigGUIflowLab-21.png)
 #### Figure 21. Execution output
 
 **4.1.4.** Enter **exit** in the teminal window to exit out of sudo shell.
