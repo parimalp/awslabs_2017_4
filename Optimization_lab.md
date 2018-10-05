@@ -28,10 +28,15 @@ This lab comprises six primary steps: You will create an SDAccel project, add a 
       cd ~/aws-fpga		  
       source sdaccel_setup.sh		  
       source $XILINX_SDX/settings64.sh	  
+   ```
+**1.1.2.** Execute the following commands in a terminal window to create a working directory:
+
+   ```
       mkdir optimization_flow	  
       cd optimization_flow
    ```
-### 1.2. Launch SDx, create a workspace in the current directory and create a project, called _optimization\_lab\_example_, using the _Empty Application_ template...
+
+### 1.2. Launch SDx, create a workspace in the current directory and create a project, called _optimization\_lab\_example_, using the _Empty Application_ template.
 **1.2.1.** Launch SDAccel by executing **sdx** in the terminal window
 
 An Eclipse launcher widow will appear asking to select a directory as workspace
@@ -47,7 +52,7 @@ The Xilinx SDx IDE window will be displayed
 
 **1.2.3.** Click on the **Add Custom Platform** link on the _Welcome_ page
 
-**1.2.4.** Click on the **Add Custom Platform** button, browse to **/home/centos/aws-fpga/SDAccel/aws\_platfom/xilinx\_aws-vu9p-f1\_4ddr-xpr-2pr\_4\_0** , and click **OK**
+**1.2.4.** Click on the **Add Custom Platform** button, browse to **/home/centos/aws-fpga/SDAccel/aws\_platfom/xilinx\_aws-vu9p-f1\_dynamic\_5\_0** , and click **OK**
 
 ![alt tag](./images/FigPlatform.png)
 #### Figure 3. Hardware platform selected
@@ -232,7 +237,7 @@ This will build the project including Optimization\_lab\_example.exe file under 
 
 **3.1.5.** Click on the **Arguments** tab and notice that the _binary\_container\_1.xclbin_ is already assigned
 
-If no argument was assigned then you would have to explicitly assigned the **xclbin** by clicking on the _Automatically add binary container(s) to arguments_, and click **Apply**
+If no argument was assigned then you would have to explicitly assign the **xclbin** by clicking on the _Automatically add binary container(s) to arguments_, and click **Apply**
 
 **3.1.6.** Click **Run** to run the application
 
