@@ -27,11 +27,15 @@ This lab comprises four primary steps: You will create an SDAccel project using 
       cd ~/aws-fpga		  
       source sdaccel_setup.sh		  
       source $XILINX_SDX/settings64.sh	  
+   ```
+**1.1.2.** Execute the following commands to create a working directory:
+
+   ```
       mkdir GUI_flow	  
       cd GUI_flow
    ```
 
-### 1.2. Launch SDx, create a workspace and create a project, called _GUI\_flow_, using the _Vector Addition_ template...
+### 1.2. Launch SDx, create a workspace and create a project, called _GUI\_flow_, using the _Vector Addition_ template.
 **1.2.1.** Launch SDAccel by executing **sdx** in the terminal window
 
 An Eclipse launcher widow will appear asking to select a directory as workspace
@@ -78,7 +82,7 @@ The project IDE will be displayed with six main windows: Project Explorer, Proje
 ## Step 2: Perform CPU Emulation
 ### **2.1.** Select the function(s) that needs to be accelerated.
 
-**2.1.1.** Click on the _Add Hardware Function_ button icon (![alt tag](./images/Fig3-hw_button.png)) in the **Hardware Functions** tab to see the functions defined in the design
+**2.1.1.** Click on the _Add Hardware Function_ button icon (![alt tag](./images/Fig-hw_button.png)) in the **Hardware Functions** tab to see the functions defined in the design
 
 **2.1.2.** Notice the _kml\_vadd_ function is the only function in the design and is already marked to be accelerated
 
@@ -103,7 +107,7 @@ The application will be run and the output will be displayed in the Console tab
 
 ## Step 3: Perform HW Emulation
 
-#### The SW Emulation flow checks functional correctness of the software application, but it does not guarantee the correctness of the design on the FPGA target. The Hardware Emulation flow can be used an verify the functionality of the generated logic. This flow invokes the hardware simulator in the SDAccel environment. As a consequence, the Hardware Emulation flow will take longer to run than the SW Emulation flow.
+#### The SW Emulation flow checks functional correctness of the software application, but it does not guarantee the correctness of the design on the FPGA target. The Hardware Emulation flow can be used to verify the functionality of the generated logic. This flow invokes the hardware simulator in the SDAccel environment. As a consequence, the Hardware Emulation flow will take longer to run than the SW Emulation flow.
 
 #### The HW Emulation flow is not cycle accurate, but provides more detailed profiling information than software emulation and can be used to do some analysis and optimization of the performance of the application.
 
@@ -246,7 +250,7 @@ This step takes about two hours
 
 To execute the application on F1, the following files are needed:
 
-- Host application
+- Host application (exe)
 - FPGA binary (xclbin)
 - Amazon FPGA Image (awsxclbin)
 
