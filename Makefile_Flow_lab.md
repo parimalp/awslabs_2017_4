@@ -106,14 +106,12 @@ The host application will then be compiled, the xclbin and the helloworld.exe fi
    ```
       sudo sh
       source /opt/Xilinx/SDx/2017.4.rte.dyn/setup.sh
-      ./helloworld xclbin/vector_addition.hw.xilinx_aws-vu9p-f1_4ddr-xpr-2pr_4_0.awsxclbin
+      ./helloworld xclbin/vector_addition.hw.xilinx_aws-vu9p-f1_dynamic_5_0.awsxclbin
    ```
 **3.1.3.** The FPGA bitstream will be downloaded and the host application will be executed showing output something like:
 
 ![alt tag](./images/makefile_lab/FigMakefileLab-6.png)
 #### Figure 6. Execution output
-
-**3.1.4.** Close the SDx by selecting **File &gt; Exit**
 
 ## Conclusion
 
@@ -146,7 +144,7 @@ This step takes about two hours
 
 To execute the application on F1, the following files are needed:
 
-- Host application
+- Host application (exe)
 - FPGA binary (xclbin)
 - Amazon FPGA Image (awsxclbin)
 
