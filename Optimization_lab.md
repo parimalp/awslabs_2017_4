@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab guides you through the steps involved in creating a project and adding a kernel function. After creating a project you will run CPU and hardware emulations to verify the functionality, analyze various generated reports and then apply techniques both on host and kernel side to improve throughput and data transfer rate.
+This lab guides you through the steps involved in creating a project and adding a kernel function. After creating a project you will run CPU and hardware emulations to verify the functionality, analyze various generated reports and then apply optimization techniques both on host and kernel side to improve throughput and data transfer rate.
 
 ## Objectives
 
