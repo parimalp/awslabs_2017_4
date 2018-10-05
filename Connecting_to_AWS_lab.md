@@ -9,10 +9,10 @@ This lab guides you through the steps involved in connecting to an AWS EC2 F1 in
 After completing this lab, you will be able to:
 
 - Connect to an AWS EC2 F1 instance using the provided credentials
-- Starting an instance
-- Starting a RDP (Remote Desktop Protocol) session
-- Closing the RDP session
-- Stopping the instance
+- Start an instance
+- Start a RDP (Remote Desktop Protocol) session
+- Close the RDP session
+- Stop the instance
 
 ## Step 1: Login into the AWS and starting an F1 instance
 
@@ -70,7 +70,7 @@ You may see several instances
 
 **1.2.6.** Click on the **Yes, Start** button
 
-**1.2.7.** Click on the refresh button(![alt tag](./images/Fig1-refresh.png)) to see the updated status to _Running_
+**1.2.7.** Click on the refresh button(![alt tag](./images/Fig-refresh.png)) to see the updated status to _Running_
 
 ![alt tag](./images/connecting_lab/FigConnectingLab-8.png)
 #### Figure 8. Running state
@@ -100,7 +100,7 @@ You may see several instances
 
 **2.1.5.** A certificate warning will be displayed. Click **Yes** to open the RDP session
 
-**2.1.6.** Enter centos as the username and enter the provided password and click OK
+**2.1.6.** Enter centos as the username and enter the provided password and click **OK**
 
 ![alt tag](./images/connecting_lab/FigConnectingLab-12.png)
 #### Figure 12. Entering username and password
@@ -129,17 +129,17 @@ You may see several instances
       sudo shutdown now	  
    ```
    
-**3.1.5.** Check the browser window, you will see status as either **Stopping** or **Stopped.** Click on the refresh button to see the status update
+**3.1.5.** Check the browser window, you will see status as either **Stopping** or **Stopped.** Click on the refresh button to see the status update  
 ![alt tag](./images/connecting_lab/FigConnectingLab-13-1.png)   ![alt tag](./images/connecting_lab/FigConnectingLab-13-2.png)
 #### Figure 13. Instance Status
 
-**3.1.6.** Once the instance is stopped, sign out by clicking on the drop-down button on the top bar and selecting Sign Out
+**3.1.6.** Once the instance is stopped, sign out by clicking on the drop-down button on the top bar and selecting **Sign Out**
 ![alt tag](./images/connecting_lab/FigConnectingLab-14.png)
 #### Figure 14. Signing out
 
 ## Conclusion
 
-In this lab, you learned how to connect to an AWS EC2 F1 instance, interact with the instance using PuTTy and RDP connection, how to stop the instance, and signing out.
+In this lab, you learned how to connect to an AWS EC2 F1 instance, interact with the instance using RDP connection, how to stop the instance, and sign out.
 
 ---------------------------------------
 
